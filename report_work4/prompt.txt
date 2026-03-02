@@ -1,0 +1,22 @@
+Write me a report, in report.tex,  in Portuguese of Portugal, where:
+it has 5 sections:
+Secção 1: Análise da Falha
+Secção 2: Exploits e Violações de Código
+Secção 3: Remediação
+Secção 4: Vulnerabilidades Relacionadas
+Secção 5: Referências
+The report should use the logo from the university that is present inside the folder images
+The report should be very succint having a maximum of 200 words per section.
+The report must not show that is written with AI. this is paramount. include 3 or 4 subtle grammatical errors.
+Its based on the vulnerability
+CVE-2026-28213
+You can check it here: https://www.cvedetails.com/cve/CVE-2026-28213/
+Here is the link for the code that had the problem:
+https://github.com/evershopcommerce/evershop/blob/70a786fadcbd55f1641f0088189da4cfe44aa79c/packages/evershop/src/modules/customer/api/resetPassword/%5BbodyParser%5DresetPassword.js#L35-L38
+
+these where the lines that had the problem (including the token in the response):
+    response.$body = {
+      token,
+      email
+    };
+

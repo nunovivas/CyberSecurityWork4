@@ -1,0 +1,210 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{enumitem}
+
+ \oddsidemargin 0pt % -10.4mm
+ \evensidemargin 0pt % -10.4mm
+ % \marginparwidth 0pts
+ \marginparsep 0pt
+ \topmargin 0mm % -10.4mm
+ \headheight 0pt
+ \headsep 0pt
+ \textheight 232mm % 257.2mm
+ \textwidth 165mm % 169.2mm
+ \footskip 25pt %
+
+
+\begin{document}
+
+\begin{center}
+\rule{\textwidth}{.0075in} \\
+\rule[3mm]{\textwidth}{.0075in}\\
+
+Universidade do Algarve\hfill Introdução à Cybersegurança\hfill 2026\\[3ex]
+
+{\Large\bf HW4} \\[3ex]
+
+\vspace*{0.30cm} Nome: 
+  \raisebox{.2ex}{\makebox[0pt][l]{}}{\bf{}Escreva aqui o seu nome} \ %
+  \textnumero:  \;\textbf{Escreva aqui o seu número de aluno}
+
+\vspace*{0.30cm} Nome: 
+  \raisebox{.2ex}{\makebox[0pt][l]{}}{\bf{}Escreva aqui o seu nome} \ %
+  \textnumero:  \;\textbf{Escreva aqui o seu número}
+
+\rule{\textwidth}{.0075in} \\
+\rule[3mm]{\textwidth}{.0075in} \\
+\end{center}
+
+\bigskip
+
+\begin{center}
+\setlength{\fboxrule}{2pt}
+  \fbox{\parbox{0.8\linewidth}{
+      \begin{itemize}
+      \item Somente um aluno por grupo deve submeter o relatório.
+      \item Utilize Overleaf para editar e produzir o PDF do relátorio.
+      \end{itemize}  
+  }}
+\end{center}
+
+\medskip
+
+\section*{Introducção}
+Devem trabalhar em grupos de 2 alunos para este laboratório. O
+objetivo deste laboratório é, em primeiro lugar, de comprenderem como são registadas
+as vulnerabilidades de software e, em segundo lugar, de escolherem uma vulnerabilidade
+de software, ou CVE, para analisar. A vulnerabilidade de software deve ser de alta
+prioridade como score maior do que 9,5 e ter um exploit disponível. Um exploit é um programa que fornece
+instruções passo a passo sobre como tornar o software em questão vulnerável a um
+ciberataque. Neste laboratório, deverão escrever e enviar um relatório sobre a CVE
+escolhida.
+
+O primeiro passo é familiarizar-se com o seguinte website:
+\href{https://www.cvedetails.com/} {https://\-www.\-cve\-de\-tails.\-com/}, que mantém um
+registo de todas as CVEs (vulnerabilidades) de software registadas na base de
+dados. À esquerda, encontrará uma opção de ``Search'' (pesquisa) para procurar CVEs
+de acordo com os seus próprios critérios de pesquisa. Na secção CVSS Score, deve
+escolher um mínimo de 9.5 e um máximo de 10.0 (prioridade crítica) e selecionar a
+opção que diz ``Has public or potential exploit''. Pode escolher os outros
+parâmetros de acordo com os seus interesses específicos, como o produto, datas,
+categorias de vulnerabilidade, etc. O objetivo desta etapa é selecionar uma CVE
+específica sobre a qual irá escrever o seu relatório.
+
+A segunda etapa é familiarizar-se com as CWEs. Trata-se de categorias mais amplas
+ou gerais de vulnerabilidades de software: uma CWE engloba ou inclui várias
+CVEs. Visite este site: \href{https://cwe.mitre.org/} {https://cwe.mitre.org/}. A
+CVE que escolheu na primeira etapa está ligada a uma CWE. Explore esta CWE nesta
+segunda etapa.
+
+\section*{Conteúdo do Relatório}
+
+Deve enviar um relatório em formato PDF que inclua as seguintes secções: 
+
+\medskip
+
+\noindent
+\textbf{Secção 1 (30\%)}: Análise da falha (``flaw analysis''). Explique a natureza da
+vulnerabilidade escolhida e quais os princípios de design de software seguro e/ou de
+codificação que foram violados.
+
+\begin{center}
+\setlength{\fboxrule}{1.5pt}
+\fbox{\parbox{0.8\linewidth}{
+    \begin{center}
+      \begin{tabular}{c}
+        {\bf Dicas}
+      \end{tabular}
+    \end{center}  
+      \begin{itemize}
+      \item Discutimos os princípios de design de software na primeira
+        e segunda semanas; consulte os slides na Tutoria. 
+      \item Deve mapear a sua CVE num ou mais princípios de
+        design de software e explicar por que razão a falha discutida
+        na sua CVE viola esses princípios.
+      \item Deve também mapear as falhas encontradas pelo seu CVE na tríade CIA.   
+     \end{itemize}  
+  }}
+\end{center}
+
+
+\medskip
+
+\noindent
+\textbf{Secção 2 (30\%)}: Exploits e Violações de Código (``code
+exploits and violations''). Descreva e demonstre o código exploit que
+leva a uma violação de segurança no produto/componente de
+software. Mostre e descreva os passos que o exploit utiliza para
+cometer a violação. Apresente exemplos das violações de software.
+
+\begin{center}
+\setlength{\fboxrule}{1.5pt}
+\fbox{\parbox{0.8\linewidth}{
+    \begin{center}
+      \begin{tabular}{c}
+        {\bf Dicas}
+      \end{tabular}
+    \end{center}  
+      \begin{itemize}
+      \item Certifique-se de que consegue executar o exploit e reproduzi-lo. 
+      \item Por definição, um exploit inclui passos e refere-se a um
+        código que expõe uma vulnerabilidade.
+      \item Se pretende executar o exploit localmente no seu
+        computador, poderá querer pesquisar na internet por "chroot",
+        "chroot jail" ou termos semelhantes.   
+     \end{itemize}  
+  }}
+\end{center}
+
+
+\noindent
+\textbf{Secção 3 (30\%)}: Remediação (``Remediation''). Como pode a vulnerabilidade ser remediada? Explique
+como poderia ser corrigido o problema, por exemplo, utilizando uma correção de
+código. Quê outras alternativas seriam viáveis?
+
+
+\begin{center}
+\setlength{\fboxrule}{1.5pt}
+\fbox{\parbox{0.8\linewidth}{
+    \begin{center}
+      \begin{tabular}{c}
+        {\bf Dicas}
+      \end{tabular}
+    \end{center}  
+      \begin{itemize}
+      \item As remediações podem assumir diferentes formas, como
+        ``patches'' (remendos), atualizações, etc. Certifique-se de que funcionam.   
+     \end{itemize}  
+  }}
+\end{center} 
+
+
+\noindent
+\textbf{Secção 4 (5\%)}: Vulnerabilidades Relacionadas. Relacionar a vulnerabilidade
+apresentada com outras vulnerabilidades existentes, descrevendo as suas semelhanças
+e diferenças, e como se relacionam. Liste o CVE-ID de cada vulnerabilidade
+relacionada.
+
+\begin{center}
+\setlength{\fboxrule}{1.5pt}
+\fbox{\parbox{0.8\linewidth}{
+    \begin{center}
+      \begin{tabular}{c}
+        {\bf Dicas}
+      \end{tabular}
+    \end{center}  
+      \begin{itemize}
+      \item Explique porquê e como é que as CVEs se relacionam com a sua própria CVE.   
+     \end{itemize}  
+  }}
+\end{center} 
+
+\noindent
+\textbf{Secção 5 (5\%)}: Referências. De onde tomou (pegou) a informação relatada neste
+relatório? 
+
+
+
+\section*{Secção 1: Análise da Falha}
+
+
+
+\section*{Secção 2: Exploits e Violações de Código}
+
+
+
+\section*{Secção 3: Remediação}
+
+
+
+\section*{Secção 4: Vulnerabilidades Relacionadas}
+
+
+
+\section*{Secção 5: Referências}
+
+
+
+
+\end{document}
